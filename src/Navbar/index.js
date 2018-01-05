@@ -17,7 +17,11 @@ export default () => (
         ) : (
           <li className="navigation-item">
             {window.username}&nbsp;
-            <Link to="/logout" className="navigation-link">
+            <Link
+              to="/logout"
+              className="navigation-link"
+              style={{ color: "#9b4dca", fontWeight: "bolder" }}
+            >
               Logout
             </Link>
           </li>
