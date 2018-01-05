@@ -13,10 +13,13 @@ function dataUIComponent(WrappedComponent, title, urlFn, fetchFn) {
     <div>
       <h1>{typeof title === "function" ? title(props) : title}</h1>
       {props.loading && <div>Loading...</div>}
-      <ul>
-        <WrappedComponent data={props.data} {...props} />
-      </ul>
       {props.error && <div className="error">ERROR: {props.error}</div>}
+      <ul>
+        {props.data &&
+          Object.keys(props.data).length && (
+            <WrappedComponent data={props.data} {...props} />
+          )}
+      </ul>
     </div>
   );
   return dataComponent(comp, urlFn, fetchFn);

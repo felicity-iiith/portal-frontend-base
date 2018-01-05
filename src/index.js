@@ -12,6 +12,8 @@ import QuestionsList from "./QuestionsList";
 import QuestionViewer from "./QuestionViewer";
 import Scoreboard from "./Scoreboard";
 
+import Hello from "./Hello";
+
 const browserHistory = createBrowserHistory();
 window.browserHistory = browserHistory;
 
